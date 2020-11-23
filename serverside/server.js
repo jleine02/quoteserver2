@@ -10,7 +10,7 @@ const QUOTE_DB_FILE = "../data/quotes_all.csv"
 // Load and configure the Express web server
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 // Set the paths that express will recognize and assign a function
 // to handle GET messages for each set of paths
