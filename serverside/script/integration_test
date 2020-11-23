@@ -1,2 +1,2 @@
 #!/bin/sh
-./node_modules/.bin/mocha ./testAllQuotes.js
+//./node_modules/.bin/mocha ./testAllQuotes.js
