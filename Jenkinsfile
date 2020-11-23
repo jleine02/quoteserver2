@@ -19,7 +19,8 @@ pipeline {
             steps {
               sh 'echo Deploying to Stage'
               sh 'cd /var/lib/jenkins/workspace/QuoteServerPipeline/serverside'
-              sh './script/deploy'
+              sh 'cd /script'
+              sh 'deploy'
             }
         }
     }
