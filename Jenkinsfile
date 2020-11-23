@@ -24,7 +24,6 @@ pipeline {
         stage('System Tests') {
             steps {
               sh 'echo Running System Tests...'
-              sh '/var/lib/jenkins/workspace/QuoteServerPipeline/serverside/script/deploy'
             }
         }
     }
