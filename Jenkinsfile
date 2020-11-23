@@ -17,7 +17,13 @@ pipeline {
         }
         stage('Deploy to Stage Env') {
             steps {
-              sh 'echo Deploying to Stage'
+              sh 'echo Deploying to Stage...'
+              sh '/var/lib/jenkins/workspace/QuoteServerPipeline/serverside/script/deploy'
+            }
+        }
+        stage('System Tests') {
+            steps {
+              sh 'echo Running System Tests...'
               sh '/var/lib/jenkins/workspace/QuoteServerPipeline/serverside/script/deploy'
             }
         }
