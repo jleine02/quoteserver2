@@ -1,5 +1,5 @@
 #!/bin/sh
-ssh ezderman@165.22.2.7 <<EOF
+ssh leiner@165.22.2.7 <<EOF
  cd ~/quoteserver/serverside
  git pull
  npm install — production
