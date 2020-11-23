@@ -12,8 +12,9 @@ pipeline {
         }
         stage('Unit Tests') {
             steps {
-              sh 'cd /var/lib/jenkins/workspace/QuoteServerPipeline/serverside'
-              sh 'node testAllQuotes.js'
+//              sh 'cd /var/lib/jenkins/workspace/QuoteServerPipeline/serverside'
+              sh 'node /var/lib/jenkins/workspace/QuoteServerPipeline/serverside
+              testAllQuotes.js'
             }
         }
         stage('Deploy to Stage Env') {
