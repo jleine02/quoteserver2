@@ -26,5 +26,10 @@ pipeline {
               sh 'echo Running System Tests...'
             }
         }
+        stage('Deploy to Prod Env') {
+            steps {
+              sh 'echo Deploying to Production...'
+            }
+        }
     }
 }
