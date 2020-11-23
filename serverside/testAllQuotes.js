@@ -9,7 +9,7 @@ function logPass(tName){
 function logFail(tName){
     console.log("FAIL - " + tName )
 }
-// T01 - Search for a quote and suceed
+// T01 - Search for a quote and succeed
 let aq01 = new AllQuotes();
 aq01.addQuote("Every man is guilty of all the good he didn't do.");
 aq01.addQuote("Before you embark on a journey of revenge, dig two graves.");

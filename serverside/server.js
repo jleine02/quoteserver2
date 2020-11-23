@@ -45,7 +45,7 @@ function getResponseHTML(sString){
             <title>Quote Server Page</title>
         </head>
         <body>
-            <h2>Quote Server</h2>
+            <h2>Quote Server ROCKS!!!!</h2>
             <form action="/search">
                 <label for="search_string">Search string:</label><br>
                 <input type="text" id="search_string" name="search_string"><br> <br>
