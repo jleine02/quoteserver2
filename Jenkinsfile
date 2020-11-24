@@ -33,7 +33,7 @@ pipeline {
               sh 'id -a'
               sh '''
                 su - leiner
-                cd /home/leiner
+                JakeAmazon123!
 
 
                 # Get the current production server and
