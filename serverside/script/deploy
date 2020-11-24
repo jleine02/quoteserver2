@@ -13,9 +13,9 @@ Get the current production server and
 set TARGET to the other server
 CURRENT=$(curl -s http://161.35.252.207:3001/hostname)
 if [ "$CURRENT" = "blue-production" ]; then
-  TARGET="green-production"
+  TARGET="165.22.2.7"
 elif [ "$CURRENT" = "green-production" ]; then
-  TARGET="blue-production"
+  TARGET="142.93.193.167"
 else
   echo CURRENT
   echo $CURRENT
