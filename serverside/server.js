@@ -16,6 +16,10 @@ const port = 3001;
 // to handle GET messages for each set of paths
 app.get('/', (req, res) => res.send(getResponseHTML(null)));
 app.get('/search', (req, res) => res.send(getResponseHTML(req.query.search_string)) );
+// trying to expose hostname here
+app.get('/hostname', function(req,res){
+  console.log(req.headers.host);
+});
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
