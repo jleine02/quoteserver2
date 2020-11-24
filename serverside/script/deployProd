@@ -26,4 +26,4 @@ else
 fi
 
 CURRENT=$(curl -s http://161.35.252.207:3001/hostname)
-echo "Current deployment is now" $CURRENT
+echo "Current deployment is now" $CURRENT "on port 3001"
