@@ -1,12 +1,3 @@
-# #!/bin/sh
-# ssh leiner@161.35.252.207 <<EOF
-#  cd ~/quoteserver2/serverside
-#  git pull
-#  npm install
-#  pm2 restart all
-#  exit
-# EOF
-
 #!/usr/bin/env bash
 
 # Get the current production server and
@@ -14,12 +5,10 @@
 CURRENT=$(curl -s http://161.35.252.207:3001/hostname)
 if [ "$CURRENT" = "blue-production" ]; then
   TARGET="165.22.2.7"
+  TARGET="165.22.2.7"
 elif [ "$CURRENT" = "green-production" ]; then
   TARGET="142.93.193.167"
 else
-  echo CURRENT
-  echo $CURRENT
-  echo "$CURRENT"
   echo "Something is not right! 😬"
 
   exit -1

@@ -33,6 +33,5 @@ pipeline {
               sh 'sudo /var/lib/jenkins/workspace/QuoteServerPipeline/serverside/script/deployProd'
             }
         }
-
     }
 }
