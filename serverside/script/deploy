@@ -9,8 +9,8 @@
 
 #!/usr/bin/env bash
 
-Get the current production server and
-set TARGET to the other server
+# Get the current production server and
+# set TARGET to the other server
 CURRENT=$(curl -s http://161.35.252.207:3001/hostname)
 if [ "$CURRENT" = "blue-production" ]; then
   TARGET="165.22.2.7"
