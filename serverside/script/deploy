@@ -17,8 +17,11 @@ if [ "$CURRENT" = "blue-production" ]; then
 elif [ "$CURRENT" = "green-production" ]; then
   TARGET="blue-production"
 else
-  echo "Something is not right! 😬"
+  echo CURRENT
+  echo $CURRENT
   echo "$CURRENT"
+  echo "Something is not right! 😬"
+
   exit -1
 fi
 
