@@ -19,7 +19,6 @@ app.get('/search', (req, res) => res.send(getResponseHTML(req.query.search_strin
 // trying to expose hostname here
 app.get('/hostname', (req,res) => res.send(getHostnameHTML(req.hostname)) );
 
-
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
 // Function to process an input message and emit the response
@@ -70,14 +69,15 @@ function isSafe(s){
     return !pattern.test(s);
 }
 
-function getHostnameHTML(request):
-    let req = request;
+function getHostnameHTML(request){
+
     let template = `
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
     <html>
         <body>
-            ${req}
+            ${request}
         </body>
     </html>`;
 
     return template
+}
