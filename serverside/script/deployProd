@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 su - leiner
+cd /home/leiner
 
 
 # Get the current production server and
