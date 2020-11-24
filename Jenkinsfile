@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy to Prod Env') {
             steps {
               sh 'echo Deploying to Production...'
-              sh '/var/lib/jenkins/workspace/QuoteServerPipeline/serverside/script/deployBlue'
+              sh '/var/lib/jenkins/workspace/QuoteServerPipeline/serverside/script/deployProd'
             }
         }
 
