@@ -81,5 +81,5 @@ function getHostnameHTML(){
     // </html>`;
     //
     // return template
-    return hostname
+    console.log(hostname)
 }
