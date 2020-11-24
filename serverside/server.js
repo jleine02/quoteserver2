@@ -17,7 +17,7 @@ const port = 3001;
 app.get('/', (req, res) => res.send(getResponseHTML(null)));
 app.get('/search', (req, res) => res.send(getResponseHTML(req.query.search_string)) );
 // trying to expose hostname here
-app.get('/hostname', (req,res) => res.send(getHostnameHTML(req.hostname)) );
+app.get('/hostname', (req,res) => res.send(getHostnameHTML()) );
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
@@ -69,13 +69,14 @@ function isSafe(s){
     return !pattern.test(s);
 }
 
-function getHostnameHTML(request){
-
+function getHostnameHTML(){
+    let os = require("os");
+    let hostname = os.hostname();
     let template = `
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
     <html>
         <body>
-            ${request}
+            ${hostname}
         </body>
     </html>`;
 
