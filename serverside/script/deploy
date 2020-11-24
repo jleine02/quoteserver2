@@ -26,7 +26,7 @@ else
 fi
 
 echo "Current deployment is " $CURRENT
-echo "Deploying to " $TARGET
+echo "Deploying to " $TARGET " on port 3001"
 
 # Do deployment
 ssh leiner@$TARGET <<EOF
