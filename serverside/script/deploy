@@ -1,5 +1,5 @@
 #!/bin/sh
-ssh leiner@165.22.2.7 <<EOF
+ssh leiner@161.35.252.207 <<EOF
  cd ~/quoteserver2/serverside
  git pull
  npm install
