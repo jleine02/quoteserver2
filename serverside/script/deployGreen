@@ -1,8 +1,0 @@
-#!/bin/sh
-ssh leiner@165.22.2.7 <<EOF
- cd ~/quoteserver2/serverside
- git pull
- npm install
- pm2 restart all
- exit
-EOF
