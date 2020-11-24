@@ -77,5 +77,5 @@ function getHostnameHTML(){
         <h1>${hostname}</h1>
     </html>`;
 
-    return hostname;
+    return hostname + '\n';
 }
