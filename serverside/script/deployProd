@@ -12,7 +12,7 @@ if [ "$CURRENT" = "blue-production" ]; then
 elif [ "$CURRENT" = "green-production" ]; then
   TARGET="142.93.193.167"
   echo "Promoting stage env to prod at ip address " $TARGET " on port 3001"
-  cat /var/lib/jenkins/pwd | sudo -S su - leiner -c "doctl compute floating-ip-action assign 161.35.252.207 218158847 --context jenkins"
+  cat /var/lib/jenkins/pwd | -S su - leiner -c "doctl compute floating-ip-action assign 161.35.252.207 218158847 --context jenkins"
 else
   echo "Something is not right! 😬"
   exit -1
