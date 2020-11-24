@@ -18,6 +18,7 @@ elif [ "$CURRENT" = "green-production" ]; then
   TARGET="blue-production"
 else
   echo "Something is not right! 😬"
+  echo $CURRENT
   exit -1
 fi
 
