@@ -1,8 +1,35 @@
-#!/bin/sh
-ssh leiner@165.22.2.7 <<EOF
+# #!/bin/sh
+# ssh leiner@165.22.2.7 <<EOF
+#  cd ~/quoteserver2/serverside
+#  git pull
+#  npm install
+#  pm2 restart all
+#  exit
+# EOF
+
+#!/usr/bin/env bash
+
+# Get the current production server and
+# set TARGET to the other server
+CURRENT=$(curl -s https://jl198quoteserver.com/hostname)
+if [ "$CURRENT" = "blue-production" ]; then
+  TARGET="green-production"
+elif [ "$CURRENT" = "green-production" ]; then
+  TARGET="blue-production"
+else
+  echo "Something is not right! 😬"
+  exit -1
+fi
+
+echo "Current deployment is " $CURRENT
+echo "Deploying to " $TARGET
+
+# Do deployment
+ssh leiner@$TARGET <<EOF
  cd ~/quoteserver2/serverside
  git pull
  npm install
  pm2 restart all
  exit
 EOF
+echo "Deploy to " $TARGET " complete"

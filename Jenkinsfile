@@ -18,12 +18,13 @@ pipeline {
         stage('Deploy to Stage Env') {
             steps {
               sh 'echo Deploying to Stage...'
-              sh '/var/lib/jenkins/workspace/QuoteServerPipeline/serverside/script/deployGreen'
+              sh '/var/lib/jenkins/workspace/QuoteServerPipeline/serverside/script/deploy'
             }
         }
         stage('System Tests') {
             steps {
               sh 'echo Running System Tests...'
+              input 'Deploy to Production?'
             }
         }
         stage('Deploy to Prod Env') {
