@@ -7,6 +7,8 @@
 const AllQuotes = require('./AllQuotes');
 const QUOTE_DB_FILE = "../data/quotes_all.csv"
 
+const os = require('os');
+
 // Load and configure the Express web server
 const express = require('express');
 const app = express();
@@ -70,12 +72,12 @@ function isSafe(s){
 }
 
 function getHostnameHTML(){
-    let os = require("os");
     let hostname = os.hostname();
     let template = `
     <html>
         <h1>${hostname}</h1>
     </html>`;
+    console.log(hostname);
 
     return hostname + '\n';
 }
