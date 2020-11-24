@@ -11,7 +11,7 @@
 
 # Get the current production server and
 # set TARGET to the other server
-CURRENT=$(curl -s https://jl198quoteserver.com/hostname)
+CURRENT=$(curl -s https://jl198quoteserver.com:3001/hostname)
 if [ "$CURRENT" = "blue-production" ]; then
   TARGET="green-production"
 elif [ "$CURRENT" = "green-production" ]; then

@@ -72,13 +72,14 @@ function isSafe(s){
 function getHostnameHTML(){
     let os = require("os");
     let hostname = os.hostname();
-    let template = `
-    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-    <html>
-        <body>
-            ${hostname}
-        </body>
-    </html>`;
-
-    return template
+    //let template = `
+    // <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    // <html>
+    //     <body>
+    //         ${hostname}
+    //     </body>
+    // </html>`;
+    //
+    // return template
+    return hostname
 }
