@@ -7,7 +7,7 @@
 #  exit
 # EOF
 
-!/usr/bin/env bash
+#!/usr/bin/env bash
 
 Get the current production server and
 set TARGET to the other server
